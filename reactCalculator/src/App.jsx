@@ -44,17 +44,17 @@ const App = () => {
         </button>
       </label>
       <h1>insira o primeiro número:</h1>
-      <input onChange={(e) => setNum1(e.target.value)} type='number' />
+      <input onChange={(e) => setNum1(Number(e.target.value))} type='number' />
       <h4>{num1}</h4>
       <h1>insira o segundo número:</h1>
-      <input onChange={(e) => setNum2(e.target.value)} type='number' />
+      <input onChange={(e) => setNum2(Number(e.target.value))} type='number' />
       <h4>{num2}</h4>
       <h1>Result: {result}</h1>
       <button onClick={(e) => {
-        (e && op === 'soma') && setResult(num1 + num2);
-        (e && op === 'sub') && setResult(num1 - num2);
-        (e && op === 'div') && setResult(num1 / num2);
-        (e && op === 'mult') && setResult(num1 * num2);
+        (e && op === 'soma') && setResult(Number(num1 + num2));
+        (e && op === 'sub') && setResult(Number(num1 - num2));
+        (e && op === 'div') && setResult(Number(num1 / num2));
+        (e && op === 'mult') && setResult(Number(num1 * num2));
       }}>
         <input type='submit' value='calcular' />
       </button>
